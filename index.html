@@ -296,10 +296,12 @@
                 <span>Subscription</span>
             </div>
             <div class="action-buttons">
+                <!-- КНОПКА СВЕРХУ (🔗) -->
                 <div class="action-btn" onclick="copyLink()" title="Скопировать ссылку подписки">
                     <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 </div>
-                <a class="action-btn tg" href="https://t.me" target="_blank" title="Открыть Telegram-канал">
+                <!-- РАБОЧАЯ ССЫЛКА НА ТЕЛЕГРАМ -->
+                <a class="action-btn tg" href="https://t.me/vpn_subscribes_free" target="_blank" rel="noopener noreferrer" title="Открыть Telegram-канал">
                     <svg viewBox="0 0 24 24"><path d="M21.5 2L2 11.5l6.8 2.7L18.5 6l-8.3 8.9M10.2 21.8l.8-4.3L19 7"></path></svg>
                 </a>
             </div>
@@ -334,17 +336,25 @@
 
         <div class="install-section">
             <h3>Установка</h3>
+            <!-- КНОПКА HAPP -->
             <div class="app-item-clickable" onclick="copyLink()">
                 <div class="app-left-box">
                     <div class="dot-indicator"></div>
                     <div>Установить через Happ</div>
                 </div>
-                <div class="app-logo-box">H</div>
-            </div>
-        </div>
-    </div>
+Используйте код с осторожностью.H🚀 Ссылка скопирована в буфер!Открой приложение HappНажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {// Ссылка, которая улетает в буфер со встроенным авто-именем проекта для Happconst link = "github.io";// Железобетонный метод копирования через невидимое текстовое полеconst textArea = document.createElement("textarea");textArea.value = link;textArea.style.position = "fixed";textArea.style.top = "0";textArea.style.left = "0";textArea.style.opacity = "0";document.body.appendChild(textArea);textArea.focus();textArea.select();textArea.setSelectionRange(0, 99999); // Специально для iOS Safaritry {document.execCommand('copy');showToast();} catch (err) {console.error('Ошибка копирования: ', err);}document.body.removeChild(textArea);}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(() => { toast.style.display = 'none'; }, 6000);}
+#### Шаг 2. Очисти кэш браузера на Айфоне
+Когда сохранишь код, подожди **3 минуты**. После этого открой Safari на телефоне, полностью **закрой вкладку с сайтом** и открой её заново. А лучше — открой ссылку в режиме «Инкогнито» (Частный доступ), чтобы старый поломанный скрипт не подгружался из памяти телефона.
 
-    <div class="toast" id="toast">
-        <div class="toast-title">🚀 Ссылка скопирована в буфер!</div>
-Используйте код с осторожностью.Открой приложение HappНажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "github.io";if (navigator.clipboard && navigator.clipboard.writeText) {navigator.clipboard.writeText(link).then(showToast).catch(showFallback);} else {showFallback();}}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(() => { toast.style.display = 'none'; }, 5000);}function showFallback() {const textArea = document.createElement("textarea");textArea.value = "github.io";textArea.style.position = "fixed";document.body.appendChild(textArea);textArea.focus();textArea.select();try {document.execCommand('copy');showToast();} catch (err) {console.error('Ошибка копирования: ', err);}document.body.removeChild(textArea);}
+---
+
+### 🔥 Что изменилось и как теперь работает импорт имени:
+Я вшил команду автоматического добавления имени прямо в тело копируемой ссылки (`#ВПН%20%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8`). 
+
+Теперь, когда пользователь копирует адрес кнопкой с сайта и вставляет в приложение **Happ**, в поле «Название подписки» у него **сразу автоматически пропишется имя: `ВПН Подписки`**, и файл `VPNS.txt` на Гитхабе можно вообще лишний раз не трогать!
+
 <FollowUp>
+Заливай этот чистый билд в свой `index.html`. 
+* Подожди **3 минуты** перед проверкой, чтобы GitHub Pages успел перезапуститься.
+* Напиши, когда обновишь вкладку — **заработал ли теперь самолётик Телеграма и копирование по кнопкам?**
+</FollowUp>

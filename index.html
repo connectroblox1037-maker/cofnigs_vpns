@@ -83,6 +83,7 @@
             align-items: center;
             cursor: pointer;
             transition: background 0.1s, transform 0.1s;
+            text-decoration: none;
         }
 
         .action-btn:hover {
@@ -101,24 +102,8 @@
             stroke-width: 2;
         }
 
-        .action-btn-disabled {
-            background: #1f242c;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            width: 42px;
-            height: 42px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        .action-btn-disabled svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
+        .action-btn.tg svg {
             stroke: #229ED9;
-            stroke-width: 2;
         }
 
         .user-card {
@@ -269,12 +254,14 @@
                 <span>Subscription</span>
             </div>
             <div class="action-buttons">
+                <!-- КНОПКА КОПИРОВАНИЯ -->
                 <div class="action-btn" onclick="copyLink()" title="Скопировать ссылку подписки">
                     <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 </div>
-                <div class="action-btn-disabled">
+                <!-- КНОПКА ТЕЛЕГРАМ КАНАЛА -->
+                <a class="action-btn tg" href="https://t.me" target="_blank" title="Открыть Telegram-канал">
                     <svg viewBox="0 0 24 24"><path d="M21.5 2L2 11.5l6.8 2.7L18.5 6l-8.3 8.9M10.2 21.8l.8-4.3L19 7"></path></svg>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -300,7 +287,7 @@
                 </div>
                 <div class="stat-box" style="grid-column: span 2;">
                     <div class="stat-label">⇅ Трафик</div>
-                    <div class="stat-value">768.35 MiB / ∞</div>
+                    <div class="stat-value">0 B / ∞</div>
                 </div>
             </div>
         </div>

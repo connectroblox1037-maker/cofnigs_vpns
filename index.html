@@ -35,7 +35,6 @@
             gap: 20px;
         }
 
-        /* Верхняя панель со ссылками */
         .header-panel {
             display: flex;
             justify-content: space-between;
@@ -73,7 +72,6 @@
             gap: 10px;
         }
 
-        /* Единственная активная кнопка копирования */
         .action-btn {
             background: #1f242c;
             border: 1px solid #30363d;
@@ -103,7 +101,6 @@
             stroke-width: 2;
         }
 
-        /* Неактивная кнопка самолетика (просто декор) */
         .action-btn-disabled {
             background: #1f242c;
             border: 1px solid #30363d;
@@ -124,7 +121,6 @@
             stroke-width: 2;
         }
 
-        /* Карточка профиля */
         .user-card {
             background-color: var(--card-bg);
             border: 1px solid #21262d;
@@ -170,18 +166,10 @@
             color: var(--text-sub);
         }
 
-        /* Сетка характеристик */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-        }
-
-        .stat-box {
-            background: #0d1117;
-            border: 1px solid #21262d;
-            border-radius: 14px;
-            padding: 12px;
         }
 
         .stat-box {
@@ -205,20 +193,12 @@
             font-weight: 600;
         }
 
-        /* Раздел Установка */
         .install-section h3 {
             font-size: 22px;
             margin: 10px 0 15px 5px;
             font-weight: 700;
         }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        /* Статичные плашки приложений без кликов */
         .app-item-static {
             background-color: var(--card-bg);
             border: 1px solid #21262d;
@@ -230,6 +210,8 @@
             font-weight: 600;
             font-size: 15px;
             pointer-events: none;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .app-left {
@@ -248,11 +230,10 @@
         .dot-indicator {
             width: 6px;
             height: 6px;
-            background-color: #dda15e;
+            background-color: #34c759;
             border-radius: 50%;
         }
 
-        /* Уведомление */
         .toast {
             display: none;
             position: fixed;
@@ -280,7 +261,6 @@
 <body>
 
     <div class="dashboard">
-        <!-- Верхняя плашка -->
         <div class="header-panel">
             <div class="logo-area">
                 <div class="logo-icon">
@@ -289,84 +269,50 @@
                 <span>Subscription</span>
             </div>
             <div class="action-buttons">
-                <!-- РАБОЧАЯ КНОПКА КОПИРОВАНИЯ -->
                 <div class="action-btn" onclick="copyLink()" title="Скопировать ссылку подписки">
                     <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 </div>
-                <!-- ПРОСТО ДЕКОР -->
                 <div class="action-btn-disabled">
                     <svg viewBox="0 0 24 24"><path d="M21.5 2L2 11.5l6.8 2.7L18.5 6l-8.3 8.9M10.2 21.8l.8-4.3L19 7"></path></svg>
                 </div>
             </div>
         </div>
 
-        <!-- Информация о юзере -->
         <div class="user-card">
             <div class="user-header">
                 <div class="status-badge">
                     <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="user-info">
-                    <h2>user_7832139670</h2>
-                    <p>Истекает через месяц</p>
+                    <h2 id="dynamic-user-title">user_7832139670</h2>
+                    <p>Безлимитная подписка</p>
                 </div>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-box">
                     <div class="stat-label">🆔 Имя пользователя</div>
-                    <div class="stat-value">user_7832139670</div>
+                    <div class="stat-value" id="dynamic-user-box">user_7832139670</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-label">✓ Статус</div>
                     <div class="stat-value" style="color: #2ea043;">Активна</div>
                 </div>
-                <div class="stat-box">
-                    <div class="stat-label">📅 Истекает</div>
-                    <div class="stat-value">22 октября, 2026</div>
-                </div>
-                <div class="stat-box">
+                <div class="stat-box" style="grid-column: span 2;">
                     <div class="stat-label">⇅ Трафик</div>
                     <div class="stat-value">768.35 MiB / ∞</div>
                 </div>
             </div>
         </div>
 
-        <!-- Раздел Установка платформ (Статичные декоративные блоки) -->
         <div class="install-section">
             <h3>Установка</h3>
-            <div class="apps-grid">
-                <div class="app-item-static">
-                    <div class="app-left">
-                        <div class="dot-indicator"></div>
-                        <span>Happ</span>
-                    </div>
-                    <div class="app-logo">H</div>
+            <div class="app-item-static">
+                <div class="app-left">
+                    <div class="dot-indicator"></div>
+                    <span>Happ</span>
                 </div>
-                <div class="app-item-static">
-                    <div class="app-left">
-                        <span>FlClashX</span>
-                    </div>
-                    <div class="app-logo">X</div>
-                </div>
-                <div class="app-item-static">
-                    <div class="app-left">
-                        <span>Koala Clash</span>
-                    </div>
-                    <div class="app-logo">🐨</div>
-                </div>
-                <div class="app-item-static">
-                    <div class="app-left">
-                        <span>Prizrak-Box</span>
-                    </div>
-                    <div class="app-logo">Ghost</div>
-                </div>
-                <div class="app-item-static">
-                    <div class="app-left">
-                        <span>Throne</span>
-                    </div>
-                    <div class="app-logo">👑</div>
-                </div>
+                <div class="app-logo">H</div>
             </div>
         </div>
     </div>
@@ -374,15 +320,21 @@
     <div class="toast" id="toast">Ссылка скопирована в буфер обмена!</div>
 
     <script>
+        function generateRandomUser() {
+            const randomId = Math.floor(1000000000 + Math.random() * 9000000000);
+            const nickname = "user_" + randomId;
+            document.getElementById('dynamic-user-title').innerText = nickname;
+            document.getElementById('dynamic-user-box').innerText = nickname;
+        }
+
+        window.onload = generateRandomUser;
+
         function copyLink() {
-            const link = "https://connectroblox1037-maker.github.io/cofnigs_vpns/VPNS.txt";
-            
+            const link = "https://github.io";
             navigator.clipboard.writeText(link).then(() => {
                 const toast = document.getElementById('toast');
                 toast.style.display = 'block';
-                setTimeout(() => {
-                    toast.style.display = 'none';
-                }, 2000);
+                setTimeout(() => { toast.style.display = 'none'; }, 2000);
             });
         }
     </script>

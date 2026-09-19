@@ -1,0 +1,224 @@
+vmess://eyJuZXQiOiJ0Y3AiLCJzY3kiOiJhdXRvIiwicG9ydCI6IjAiLCJ2IjoiMiIsInBzIjoi8J+RhyDQktGB0LUg0L/QvtC00L/QuNGB0LrQuCDRgSDQutCw0L3QsNC70LAiLCJhZGQiOiIwLjAuMC4wIiwiaWQiOiIwMDAwLTAwMDAtMDAwMC0wMDAwIiwidHlwZSI6Im5vbmUifQ==
+{ "burstObservatory" : { "pingConfig" : { "destination" : "http://www.gstatic.com/generate_204", "httpMethod" : "HEAD", "interval" : "1m", "sampling" : 2, "timeout" : "5s" }, "subjectSelector" : [ "bridge", "whitelist" ] }, "dns" : { "queryStrategy" : "UseIPv4", "servers" : [ { "address" : "https://8.8.8.8/dns-query", "skipFallback" : false }, { "address" : "https://9.9.9.9/dns-query", "skipFallback" : false }, { "address" : "https://1.1.1.1/dns-query", "skipFallback" : false } ] }, "inbounds" : [ { "listen" : "127.0.0.1", "port" : 10808, "protocol" : "socks", "settings" : { "auth" : "noauth", "udp" : true }, "sniffing" : { "destOverride" : [ "http", "tls", "quic" ], "enabled" : true, "routeOnly" : false }, "tag" : "socks" }, { "listen" : "127.0.0.1", "port" : 10809, "protocol" : "http", "settings" : { "allowTransparent" : false }, "sniffing" : { "destOverride" : [ "http", "tls", "quic" ], "enabled" : true, "routeOnly" : false }, "tag" : "http" }, { "listen" : "127.0.0.1", "port" : 10803, "protocol" : "dokodemo-door", "settings" : { "address" : "127.0.0.1", "network" : "tcp,udp", "port" : 0 }, "tag" : "entry-whitelist-fallback" } ], "log" : { "access" : "/private/var/mobile/Containers/Shared/AppGroup/2EA4F3A3-6CE9-420B-97AE-BC2F4B1ADEA8/Library/Application Support/Xray/logs/access.log", "dnsLog" : true, "loglevel" : "Warning" }, "outbounds" : [ { "protocol" : "vless", "settings" : { "vnext" : [ { "address" : "ascentimplodeboat.indigoyarn.art", "port" : 443, "users" : [ { "encryption" : "none", "flow" : "xtls-rprx-vision", "id" : "4e30af86-640b-440f-a3c4-f3e63bbd6b95" } ] } ] }, "streamSettings" : { "network" : "tcp", "realitySettings" : { "fingerprint" : "firefox", "publicKey" : "ruLdcX4DDyrZGzDhy4Da87fULoIZs5wbpESDpTbALQw", "serverName" : "ascentimplodeboat.indigoyarn.art", "shortId" : "7afc7016631aa46a" }, "security" : "reality", "tcpSettings" : {
+    }
+  },
+  "tag" : "bridge"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "laggeddrenchcurly.brackenmount.com",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "4e30af86-640b-440f-a3c4-f3e63bbd6b95"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "firefox",
+      "publicKey" : "WAiUIB-B_atmuRIEIt3ktYfQcG5aswZz8lg1NLiq1U0",
+      "serverName" : "laggeddrenchcurly.brackenmount.com",
+      "shortId" : "ef995c2d2092537f"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "bridge-2"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "valasma-lonofu.forumsociety.info",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "4e30af86-640b-440f-a3c4-f3e63bbd6b95"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "firefox",
+      "publicKey" : "Nn9qoyJqjiJH-PliIjmy8lPtl0mIo52B3p6AeWsHQT4",
+      "serverName" : "valasma-lonofu.forumsociety.info",
+      "shortId" : "9d9d411dbf0c1130"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "bridge-3"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "sectorcorkspirits.hammerloom.dev",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "4e30af86-640b-440f-a3c4-f3e63bbd6b95"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "firefox",
+      "publicKey" : "lE4tR5PW7C0ddokQhKXIgc1gfDrQwrCzrUlt-FY_HHI",
+      "serverName" : "sectorcorkspirits.hammerloom.dev",
+      "shortId" : "949a32018b761ecf"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "bridge-4"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+{ "burstObservatory" : { "pingConfig" : { "connectivity" : "", "destination" : "http://cp.cloudflare.com/generate_204", "interval" : "90s", "sampling" : 1, "timeout" : "2s" }, "subjectSelector" : [ "proxy" ] }, "dns" : { "queryStrategy" : "UseIPv4", "servers" : [ "1.1.1.1", "1.0.0.1" ] }, "inbounds" : [ { "listen" : "127.0.0.1", "port" : 10808, "protocol" : "socks", "settings" : { "auth" : "noauth", "udp" : true }, "sniffing" : { "destOverride" : [ "http", "tls" ], "domainsExcluded" : [ "push.apple.com", "api.push.apple.com", "courier.push.apple.com" ], "enabled" : true, "routeOnly" : true }, "tag" : "socks" }, { "listen" : "127.0.0.1", "port" : 10809, "protocol" : "http", "settings" : { "allowTransparent" : false }, "sniffing" : { "destOverride" : [ "http", "tls" ], "domainsExcluded" : [ "push.apple.com", "api.push.apple.com", "courier.push.apple.com" ], "enabled" : true, "routeOnly" : true }, "tag" : "http" } ], "log" : { "access" : "/private/var/mobile/Containers/Shared/AppGroup/2EA4F3A3-6CE9-420B-97AE-BC2F4B1ADEA8/Library/Application Support/Xray/logs/access.log", "dnsLog" : true, "loglevel" : "Warning" }, "outbounds" : [ { "protocol" : "vless", "settings" : { "vnext" : [ { "address" : "icloud.cdn-europe.org", "port" : 443, "users" : [ { "encryption" : "none", "flow" : "xtls-rprx-vision", "id" : "088cb020-c8f7-4069-8755-90efd4635f50" } ] } ] }, "streamSettings" : { "network" : "tcp", "realitySettings" : { "fingerprint" : "firefox", "publicKey" : "oTSZ8s1btblYQ-19eX0u8wQePodvAld45JfSEwnfHR0", "serverName" : "icloud.cdn-europe.org", "shortId" : "624ef62512cfcbef" }, "security" : "reality", "tcpSettings" : {
+    }
+  },
+  "tag" : "proxy"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "france-dj.cdn-europe.org",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "088cb020-c8f7-4069-8755-90efd4635f50"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "firefox",
+      "publicKey" : "oTSZ8s1btblYQ-19eX0u8wQePodvAld45JfSEwnfHR0",
+      "serverName" : "france-dj.cdn-europe.org",
+      "shortId" : "624ef62512cfcbef"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "proxy-2"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "nl.cdn-europe.org",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "088cb020-c8f7-4069-8755-90efd4635f50"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "firefox",
+      "publicKey" : "oTSZ8s1btblYQ-19eX0u8wQePodvAld45JfSEwnfHR0",
+      "serverName" : "nl.cdn-europe.org",
+      "shortId" : "624ef62512cfcbef"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "proxy-3"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "germany.cdn-europe.org",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "088cb020-c8f7-4069-8755-90efd4635f50"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {
+    "network" : "tcp",
+    "realitySettings" : {
+      "fingerprint" : "qq",
+      "publicKey" : "W3ezAT8DB8WlL4iaV6E6EdWnts1ihGl7AUf-nvTq2y4",
+      "serverName" : "germany.cdn-europe.org",
+      "shortId" : "694ee64512cfcaef"
+    },
+    "security" : "reality",
+    "tcpSettings" : {
+
+    }
+  },
+  "tag" : "proxy-4"
+},
+{
+  "protocol" : "vless",
+  "settings" : {
+    "vnext" : [
+      {
+        "address" : "norway.cdn-europe.org",
+        "port" : 443,
+        "users" : [
+          {
+            "encryption" : "none",
+            "flow" : "xtls-rprx-vision",
+            "id" : "088cb020-c8f7-4069-8755-90efd4635f50"
+          }
+        ]
+      }
+    ]
+  },
+  "streamSettings" : {

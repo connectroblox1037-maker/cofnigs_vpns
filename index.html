@@ -10,6 +10,7 @@
             --card-bg: #161b22;
             --text-main: #ffffff;
             --text-sub: #8b949e;
+            --accent-cyan: #12b5cb;
         }
 
         body {
@@ -22,6 +23,7 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
+            min-height: 100dvh;
             box-sizing: border-box;
             user-select: none;
             -webkit-user-select: none;
@@ -48,7 +50,7 @@
             gap: 10px;
             font-size: 22px;
             font-weight: 700;
-            color: #12b5cb;
+            color: var(--accent-cyan);
         }
 
         .logo-icon {
@@ -59,7 +61,7 @@
 
         .logo-icon div {
             width: 3px;
-            background-color: #12b5cb;
+            background-color: var(--accent-cyan);
             border-radius: 2px;
         }
         .logo-icon div:nth-child(1) { height: 12px; }
@@ -84,6 +86,7 @@
             cursor: pointer;
             transition: background 0.1s, transform 0.1s;
             text-decoration: none;
+            box-sizing: border-box;
         }
 
         .action-btn:hover {
@@ -184,39 +187,58 @@
             font-weight: 700;
         }
 
-        .app-item-static {
+        .app-item-clickable {
             background-color: var(--card-bg);
-            border: 1px solid #21262d;
-            border-radius: 14px;
-            padding: 18px;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             font-weight: 600;
-            font-size: 15px;
-            pointer-events: none;
+            font-size: 17px;
+            cursor: pointer;
             box-sizing: border-box;
             width: 100%;
+            transition: background 0.1s, transform 0.1s, border-color 0.2s;
+            color: inherit;
+            outline: none;
+        }
+
+        .app-item-clickable:hover {
+            background: #1f252e;
+            border-color: var(--accent-cyan);
+        }
+
+        .app-item-clickable:active {
+            transform: scale(0.98);
         }
 
         .app-left {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .app-logo {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
-            color: var(--text-sub);
-            opacity: 0.2;
+            color: var(--accent-cyan);
+            background: rgba(18, 181, 203, 0.1);
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
         }
 
         .dot-indicator {
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             background-color: #34c759;
             border-radius: 50%;
+            box-shadow: 0 0 8px #34c759;
         }
 
         .toast {
@@ -225,20 +247,38 @@
             bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
-            background: #2ea043;
+            background: #1c1c1e;
             color: white;
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
+            padding: 16px 24px;
+            border-radius: 16px;
             font-size: 14px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            width: 85%;
+            max-width: 380px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             z-index: 10;
-            border: 1px solid rgba(255,255,255,0.1);
-            animation: popUp 0.2s ease-out;
+            border: 1px solid #30363d;
+            animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+        }
+
+        .toast-title {
+            color: #34c759;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toast-steps {
+            color: var(--text-sub);
+            padding-left: 15px;
+            margin: 0;
+            line-height: 1.5;
         }
 
         @keyframes popUp {
-            from { transform: translate(-50%, 15px); opacity: 0; }
+            from { transform: translate(-50%, 30px); opacity: 0; }
             to { transform: translate(-50%, 0); opacity: 1; }
         }
     </style>
@@ -254,12 +294,10 @@
                 <span>Subscription</span>
             </div>
             <div class="action-buttons">
-                <!-- КНОПКА КОПИРОВАНИЯ -->
                 <div class="action-btn" onclick="copyLink()" title="Скопировать ссылку подписки">
                     <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 </div>
-                <!-- КНОПКА ТЕЛЕГРАМ КАНАЛА -->
-                <a class="action-btn tg" href="https://t.me" target="_blank" title="Открыть Telegram-канал">
+                <a class="action-btn tg" href="https://t.me/vpn_subscribes_free" target="_blank" title="Открыть Telegram-канал">
                     <svg viewBox="0 0 24 24"><path d="M21.5 2L2 11.5l6.8 2.7L18.5 6l-8.3 8.9M10.2 21.8l.8-4.3L19 7"></path></svg>
                 </a>
             </div>
@@ -294,36 +332,18 @@
 
         <div class="install-section">
             <h3>Установка</h3>
-            <div class="app-item-static">
-                <div class="app-left">
-                    <div class="dot-indicator"></div>
-                    <span>Happ</span>
-                </div>
-                <div class="app-logo">H</div>
-            </div>
+            <button class="app-item-clickable" onclick="copyLink()">
+                <span class="app-left">
+                    <span class="dot-indicator"></span>
+                    <span>Установить через Happ</span>
+                </span>
+                <span class="app-logo">H</span>
+            </button>
         </div>
     </div>
 
-    <div class="toast" id="toast">Ссылка скопирована в буфер обмена!</div>
-
-    <script>
-        function generateRandomUser() {
-            const randomId = Math.floor(1000000000 + Math.random() * 9000000000);
-            const nickname = "user_" + randomId;
-            document.getElementById('dynamic-user-title').innerText = nickname;
-            document.getElementById('dynamic-user-box').innerText = nickname;
-        }
-
-        window.onload = generateRandomUser;
-
-        function copyLink() {
-            const link = "https://github.io";
-            navigator.clipboard.writeText(link).then(() => {
-                const toast = document.getElementById('toast');
-                toast.style.display = 'block';
-                setTimeout(() => { toast.style.display = 'none'; }, 2000);
-            });
-        }
-    </script>
-</body>
-</html>
+    <div class="toast" id="toast">
+        <div class="toast-title">🚀 Ссылка скопирована в буфер!</div>
+        <ol class="toast-steps">
+Используйте код с осторожностью.Открой приложение HappНажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "https://connectroblox1037-maker.github.io/cofnigs_vpns/VPNS.txt";navigator.clipboard.writeText(link).then(() => {const toast = document.getElementById('toast');if (toastTimeout) {clearTimeout(toastTimeout);}toast.style.display = 'block';toastTimeout = setTimeout(() => {toast.style.display = 'none';}, 4000);}).catch(err => {console.error('Ошибка копирования: ', err);});}
+<FollowUp>

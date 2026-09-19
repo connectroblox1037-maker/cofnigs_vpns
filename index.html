@@ -15,13 +15,12 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            min-height: 100vh;
             min-height: 100dvh;
             box-sizing: border-box;
             user-select: none;
@@ -76,16 +75,12 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: background 0.1s, transform 0.1s;
+            transition: background 0.1s;
             text-decoration: none;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
-        .action-btn:hover {
-            background: #262c36;
-        }
-        .action-btn:active {
-            transform: scale(0.95);
-        }
+        .action-btn:hover { background: #262c36; }
         .action-btn svg {
             width: 20px;
             height: 20px;
@@ -93,9 +88,7 @@
             stroke: #8b949e;
             stroke-width: 2;
         }
-        .action-btn.tg svg {
-            stroke: #229ED9;
-        }
+        .action-btn.tg svg { stroke: #229ED9; }
         .user-card {
             background-color: var(--card-bg);
             border: 1px solid #21262d;
@@ -125,16 +118,8 @@
             stroke-width: 3;
             fill: none;
         }
-        .user-info h2 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 700;
-        }
-        .user-info p {
-            margin: 3px 0 0 0;
-            font-size: 13px;
-            color: var(--text-sub);
-        }
+        .user-info h2 { margin: 0; font-size: 18px; font-weight: 700; }
+        .user-info p { margin: 3px 0 0 0; font-size: 13px; color: var(--text-sub); }
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -154,10 +139,7 @@
             gap: 5px;
             margin-bottom: 6px;
         }
-        .stat-value {
-            font-size: 15px;
-            font-weight: 600;
-        }
+        .stat-value { font-size: 15px; font-weight: 600; }
         .install-section h3 {
             font-size: 22px;
             margin: 10px 0 15px 5px;
@@ -176,7 +158,7 @@
             cursor: pointer;
             box-sizing: border-box;
             width: 100%;
-            transition: background 0.1s, transform 0.1s, border-color 0.2s;
+            transition: background 0.1s, border-color 0.2s;
             color: #ffffff;
             -webkit-tap-highlight-color: transparent;
         }
@@ -184,14 +166,10 @@
             background: #1f252e;
             border-color: var(--accent-cyan);
         }
-        .app-item-clickable:active {
-            transform: scale(0.98);
-        }
         .app-left-box {
             display: flex;
             align-items: center;
             gap: 12px;
-            pointer-events: none;
         }
         .app-logo-box {
             font-size: 22px;
@@ -204,7 +182,6 @@
             justify-content: center;
             align-items: center;
             border-radius: 10px;
-            pointer-events: none;
         }
         .dot-indicator {
             width: 8px;
@@ -262,10 +239,12 @@
                 <span>Subscription</span>
             </div>
             <div class="action-buttons">
+                <!-- КНОПКА СВЕРХУ -->
                 <div class="action-btn" onclick="copyLink()">
                     <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 </div>
-                <a class="action-btn tg" href="https://t.me" target="_blank">
+                <!-- КНОПКА ССЫЛКИ ТГ -->
+                <a class="action-btn tg" href="https://t.me" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24"><path d="M21.5 2L2 11.5l6.8 2.7L18.5 6l-8.3 8.9M10.2 21.8l.8-4.3L19 7"></path></svg>
                 </a>
             </div>
@@ -297,6 +276,7 @@
         </div>
         <div class="install-section">
             <h3>Установка</h3>
+            <!-- КНОПКА HAPP -->
             <div class="app-item-clickable" onclick="copyLink()">
                 <div class="app-left-box">
                     <div class="dot-indicator"></div>
@@ -310,9 +290,12 @@
         <div class="toast-title">🚀 Ссылка скопирована в буфер!</div>
         <ol class="toast-steps">
             <li>Открой приложение <b>Happ</b></li>
-Используйте код с осторожностью.Нажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "github.io";const textArea = document.createElement("textarea");textArea.value = link;textArea.style.position = "fixed";textArea.style.top = "0";textArea.style.left = "0";textArea.style.opacity = "0";document.body.appendChild(textArea);textArea.focus();textArea.select();textArea.setSelectionRange(0, 99999);try {document.execCommand('copy');showToast();} catch (err) {console.error('Ошибка:', err);}document.body.removeChild(textArea);}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(() => { toast.style.display = 'none'; }, 5000);}
+            <li>Нажми на <b>[+]</b> в правом верхнем углу</li>
+            <li>Выбери <b>Добавить подписку</b>, вставь адрес и сохрани</li>
+        </ol>
+    </div>
+    <script>
+        let toastTimeout = null;
+        function generateRandomUser() {
+Используйте код с осторожностью.const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "github.io";// Современный и 100% поддерживаемый на iOS метод API буфера обменаnavigator.clipboard.writeText(link).then(function() {showToast();}).catch(function() {// Запасной вариант если Safari заблокировал прямой доступconst textArea = document.createElement("textarea");textArea.value = link;textArea.style.position = "absolute";textArea.style.left = "-9999px";document.body.appendChild(textArea);textArea.select();document.execCommand('copy');document.body.removeChild(textArea);showToast();});}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(function() { toast.style.display = 'none'; }, 5000);}
 <FollowUp>
-Сохраняйте этот абсолютно чистый вариант! 
-* Обязательно подождите **3-4 минуты**, чтобы Гитхаб успел обновить страницу.
-* Зайдите на сайт с телефона через **режим инкогнито** (чтобы точно сбросить старый поломанный кэш). 
-Удалось вернуть красивый дизайн панели?

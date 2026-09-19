@@ -187,7 +187,6 @@
             font-weight: 700;
         }
 
-        /* ИСПРАВЛЕННАЯ СТРУКТУРА КНОПКИ HAPP */
         .app-item-clickable {
             background-color: var(--card-bg);
             border: 1px solid #30363d;
@@ -219,7 +218,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            pointer-events: none; /* Блокирует перехват клика текстом внутри Safari */
+            pointer-events: none;
         }
 
         .app-logo-box {
@@ -335,11 +334,17 @@
 
         <div class="install-section">
             <h3>Установка</h3>
-            <!-- НАДЕЖНЫЙ ДИВ ДЛЯ SAFARI С ФИРМЕННЫМ КОПИРОВАНИЕМ -->
             <div class="app-item-clickable" onclick="copyLink()">
                 <div class="app-left-box">
                     <div class="dot-indicator"></div>
                     <div>Установить через Happ</div>
                 </div>
-Используйте код с осторожностью.H🚀 Ссылка скопирована в буфер!Открой приложение HappНажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "github.io";// Универсальный метод копирования для iOS/Safariif (navigator.clipboard && navigator.clipboard.writeText) {navigator.clipboard.writeText(link).then(showToast).catch(showFallback);} else {showFallback();}}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(() => { toast.style.display = 'none'; }, 4000);}function showFallback() {// Запасной ручной метод копирования, если буфер обмена заблокирован настройками приватности iOSconst textArea = document.createElement("textarea");textArea.value = "github.io";textArea.style.position = "fixed";document.body.appendChild(textArea);textArea.focus();textArea.select();try {document.execCommand('copy');showToast();} catch (err) {alert('Не удалось скопировать. Пожалуйста, выделите ссылку вручную.');}document.body.removeChild(textArea);}
+                <div class="app-logo-box">H</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <div class="toast-title">🚀 Ссылка скопирована в буфер!</div>
+Используйте код с осторожностью.Открой приложение HappНажми на [+] в правом верхнем углуВыбери Добавить подписку, вставь адрес и сохраниlet toastTimeout = null;function generateRandomUser() {const randomId = Math.floor(1000000000 + Math.random() * 9000000000);const nickname = "user_" + randomId;document.getElementById('dynamic-user-title').innerText = nickname;document.getElementById('dynamic-user-box').innerText = nickname;}window.onload = generateRandomUser;function copyLink() {const link = "github.io";if (navigator.clipboard && navigator.clipboard.writeText) {navigator.clipboard.writeText(link).then(showToast).catch(showFallback);} else {showFallback();}}function showToast() {const toast = document.getElementById('toast');if (toastTimeout) clearTimeout(toastTimeout);toast.style.display = 'block';toastTimeout = setTimeout(() => { toast.style.display = 'none'; }, 5000);}function showFallback() {const textArea = document.createElement("textarea");textArea.value = "github.io";textArea.style.position = "fixed";document.body.appendChild(textArea);textArea.focus();textArea.select();try {document.execCommand('copy');showToast();} catch (err) {console.error('Ошибка копирования: ', err);}document.body.removeChild(textArea);}
 <FollowUp>

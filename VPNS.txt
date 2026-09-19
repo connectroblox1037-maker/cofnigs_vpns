@@ -1,3 +1,5 @@
+#profile-title: 🛜 | VPN: Подписки из канала
+
 vmess://eyJuZXQiOiJ0Y3AiLCJzY3kiOiJhdXRvIiwicG9ydCI6IjAiLCJ2IjoiMiIsInBzIjoiLS0tINCS0LDRiNC4INGB0LXRgNCy0LXRgNCwIC0tLSIsImFkZCI6IjAuMC4wLjAiLCJpZCI6IjAwMDAtMDAwMC0wMDAwIiwidHlwZSI6Im5vbmUifQ==
 
 vless://4e30af86-640b-440f-a3c4-f3e63bbd6b95@ascentimplodeboat.indigoyarn.art:443?security=reality&sni=ascentimplodeboat.indigoyarn.art&fp=firefox&pbk=ruLdcX4DDyrZGzDhy4Da87fULoIZs5wbpESDpTbALQw&sid=7afc7016631aa46a&flow=xtls-rprx-vision#%5B%2B%5D%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B5%D1%80%201

@@ -1,4 +1,4 @@
-#profile-title: 🛜 | VPN: Подписки из канала
+#profile-title: 🛜 | VPN Pro: Подписки
 
 vmess://eyJuZXQiOiJ0Y3AiLCJzY3kiOiJhdXRvIiwicG9ydCI6IjAiLCJ2IjoiMiIsInBzIjoiLS0tINCS0LDRiNC4INGB0LXRgNCy0LXRgNCwIC0tLSIsImFkZCI6IjAuMC4wLjAiLCJpZCI6IjAwMDAtMDAwMC0wMDAwIiwidHlwZSI6Im5vbmUifQ==
 

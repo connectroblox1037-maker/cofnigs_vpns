@@ -1,6 +1,6 @@
-#subscription-lock: true
-#hide-settings: true
-#subscription-pin: true
+#happ-config-version: 1
+#happ-pin: true
+#happ-lock: true
 #profile-title: 🛜 | VPN Pro: Подписки
 #profile-desc: ✨ Спасибо, что выбрали нас! По всем вопросам: @vpn_subscribes_free
 

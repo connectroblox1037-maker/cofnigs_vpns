@@ -1,5 +1,9 @@
 #subscription-lock: true
 #subscription-pin: true
+#hide-settings: true
+#support-url: https://t.me/vpn_subscribes_bot
+#subscription-userinfo: upload=0; download=2153701362; total=0; expire=1790951622
+#profile-web-page-url: https://clck.ru/3VzYvF
 #profile-title: 🛜 | VPN Pro: Подписки
 
 vmess://eyJuZXQiOiJ0Y3AiLCJzY3kiOiJhdXRvIiwicG9ydCI6IjAiLCJ2IjoiMiIsInBzIjoiLS0tINCS0LDRiNC4INGB0LXRgNCy0LXRgNCwIC0tLSIsImFkZCI6IjAuMC4wLjAiLCJpZCI6IjAwMDAtMDAwMC0wMDAwIiwidHlwZSI6Im5vbmUifQ==

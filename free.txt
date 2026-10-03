@@ -1,5 +1,23 @@
 #profile-title: 🛜 | VPN Free: Подписки
 
+# providerid: 1XtaUYGs
+
+# profile-update-interval: 1
+
+# subscription-userinfo: upload=0; download=1; total=0
+
+# profile-web-page-url: https://tinyurl.com/52428p7s
+
+# support-url: https://t.me/vpn_subscribes_free
+
+# announce:✨ Спасибо, что выбрали нас! По всем вопросам: @vpn_subscribes_free
+
+# subscription-lock: 1
+
+# subscription-pin: 1
+
+# hide-settings: 1
+
 vmess://eyJuZXQiOiJ0Y3AiLCJzY3kiOiJhdXRvIiwicG9ydCI6IjAiLCJ2IjoiMiIsInBzIjoiLS0tINCS0LDRiNC4INGB0LXRgNCy0LXRgNCwIC0tLSIsImFkZCI6IjAuMC4wLjAiLCJpZCI6IjAwMDAtMDAwMC0wMDAwIiwidHlwZSI6Im5vbmUifQ==
 
 vless://4e30af86-640b-440f-a3c4-f3e63bbd6b95@ascentimplodeboat.indigoyarn.art:443?security=reality&sni=ascentimplodeboat.indigoyarn.art&fp=firefox&pbk=ruLdcX4DDyrZGzDhy4Da87fULoIZs5wbpESDpTbALQw&sid=7afc7016631aa46a&flow=xtls-rprx-vision#%5B%2B%5D%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B5%D1%80%201

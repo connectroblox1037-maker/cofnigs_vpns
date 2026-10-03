@@ -2,7 +2,7 @@
 
 #profile-update-interval: 1
 
-#subscription-userinfo: upload=0; download=1; total=0; expire=999999999
+#subscription-userinfo: upload=0; download=1; total=0
 
 #profile-web-page-url: https://tinyurl.com/52428p7s
 

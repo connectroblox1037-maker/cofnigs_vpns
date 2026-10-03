@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка безопасного VPN</title>
+    <style>
+        :root {
+            --bg-color: #0a0b10;
+            --card-bg: #12141c;
+            --text-color: #ffffff;
+            --text-secondary: #8a8f98;
+            --primary-glow: #3b82f6;
+            --btn-grad-start: #2563eb;
+            --btn-grad-end: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Декоративный размытый фон */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-glow);
+            filter: blur(120px);
+            opacity: 0.15;
+            top: 20%;
+            left: 20%;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #a855f7;
+            filter: blur(120px);
+            opacity: 0.1;
+            bottom: 20%;
+            right: 20%;
+            z-index: 0;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 440px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 24px;
+            color: #60a5fa;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--btn-grad-start), var(--btn-grad-end));
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            opacity: 0.95;
+        }
+
+        .features {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .feature-item {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .feature-item strong {
+            display: block;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Иконка щита (Защита/VPN) -->
+        <div class="icon-wrapper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+        </div>
+
+        <h1>Настройка VPN</h1>
+        <p>Нажмите кнопку ниже, чтобы автоматически импортировать конфигурацию и запустить безопасное подключение.</p>
+
+        <!-- Кнопка с вашей ссылкой -->
+        <a href="happ://crypt5/fzvdYBdTW66wcf93sReappg8762NQVr3gkiLiH0BJpj/RD4Unv97NhtfYc4njay/zLMvLmTbUD90gCQYtajlcCSjgnDMWyZ5LTt27YEBxt=d+zB62HqSEX7ZZ7AwyWPjXEinYa2GxgJEZ/TV7Vj1la9khpt/G3GgCqeHz0oRVxRVJcTEacJQ0xBciKuof5g8CQsotLroFxcCgW9IpW15Qm+S6+N8BeC/Uz2ABWGnMtVVWHxpm09+9bGoTh4YHEAR563SirAsXHCgG7LFjgMlUScwv6PQP2kGTFqCJh2/Ob29f2Vn9bZlATO5/bTHDxWD29Xpg31OX877DmYle1Rc2qL+I7QeYea31o9GiyaWlb4NBgoCPp4gPA0naFrInT6Qn+n9ipY0mA5BDljfRW7I1uyOBPGvZkltKcpDBja0bwMrdH4XVy76o8XYYDD5EwJ31myan7xB8Yr6o1w4vZ44mqtsTayh2raZJn1avKdHZFw8k3ee+yBIJYeHyRE77yOChDocweAjqzLlnOdsyyopLK8FAuDloJKpbiF4hN9zR58cwuDfUtNPJoXsDV+KlMhQVee7JGh6eyfosOmIjaPStP0Gnip9XZtKKHqHlAky1aFkIJuL8sxwmvPJ0KamsWwDFsOuxeXtVYs6U0EE5IG1Ut6Vjpik380aT331cyDemdpnSQbg6yKVIXrpCSbTAzyUDEraQUm4CB/XJy/XpehKbqlUgCMdW23jaYLPFxSRsPxj7toR30lRhmmOx48D6FotlydlFupY0nY/QVZkPg4Lof=ff" class="btn">
+            Установить VPN
+        </a>
+
+        <!-- Дополнительные плашки для солидности -->
+        <div class="features">
+            <div class="feature-item">
+                <strong>Безопасно</strong>
+                256-bit AES
+            </div>
+            <div class="feature-item">
+                <strong>Быстро</strong>
+                Без лимитов
+            </div>
+            <div class="feature-item">
+                <strong>Просто</strong>
+                В один клик
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,5 +1,11 @@
 #profile-title: 🛜 | VPN Pro: Подписки
 
+#profile-update-interval: 1
+
+#profile-web-page-url: https://tinyurl.com/52428p7s
+
+#support-url: https://t.me/vpn_subscribes_free
+
 #announce:✨ Спасибо, что выбрали нас! По всем вопросам: @vpn_subscribes_free
 
 #subscription-lock: 1

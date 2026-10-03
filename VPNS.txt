@@ -1,5 +1,5 @@
 # profile-title: 🛜 | VPN Pro: Подписки
-# providerid: vpn_pro_subscribes
+# providerid: 1XtaUYGs
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=1; total=0
 # profile-web-page-url: https://tinyurl.com/52428p7s

@@ -1,6 +1,6 @@
 # profile-title: 🛜 | VPN Pro: Подписки
 
-# providerid: https://tinyurl.com/3czeth4k
+# providerid: vpn_pro_subscribes
 
 # profile-update-interval: 1
 

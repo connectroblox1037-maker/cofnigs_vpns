@@ -1,4 +1,4 @@
-# profile-title: 🛜 | VPN Pro: Подписки
+# profile-title: 🛜 | VPN DEV: Подписки
 
 # providerid: 1XtaUYGs
 
